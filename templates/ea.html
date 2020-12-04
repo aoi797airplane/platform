@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block  css %}
+<link rel="stylesheet" href="{% static 'ea/styles/style.css' %}" >
+
+{% endblock %}
+
+{% block title %}
+EA libraries EA
+{% endblock title %}
+
+{% block content %}
+<div id="ea">
+  <div class="nameofea">
+    <h2 class="active"> Vision System </h2>
+  </div>
+
+<div class="button_content">
+    <a href="{% url 'request' %}" class="btn btn--circle"><i class="far fa-envelope"></i>今すぐ無料で<br>このEAをダウンロード<i class="fas fa-angle-down fa-position-bottom"></i></a>
+</div>
+  
+  <div class="links">
+    <h3 class = "main_info" id="other_info">EA概要</h3>
+    <h3 class = "back" id="other_info">バックテスト</h3>
+    <h3 class = "foward" id="other_info">フォワードテスト</h3>
+  </div>
+
+  <div class="container" id = 'main'>
+    <table>
+      <tr>
+        <th>純利益率</th>
+        <th>37.96 倍</th>
+      </tr>
+      <tr>
+        <tr>
+          <th>純利益</th>
+          <th>$379,688.45</th>
+        </tr>
+        <tr>
+      <tr>
+        <th>初期証拠金</th>
+        <th>$10,000</th>
+      </tr>
+      <tr>
+
+ 
+        <th>通貨ペア</th>
+        <th>USDJPY</th>
+      </tr>
+
+        <th>バックテスト期間</th>
+        <th>2012/1 ~ 2018/1(6年)</th>
+      </tr>
+
+        <th>プロフィットファクター</th>
+        <th> 1.20</th>
+      </tr>
+
+    </table>
+      <div class="image">
+        <img src="{% static 'image/vision_system.png' %}" alt="vision_system">
+      </div>
+    <div class="explanation">
+      <p>MA50、 MA100、　MACDの３つのインジケータを使用して買いシグナル、負けシグナルを判断し、決済EAです。
+        MACDをを利用してストップロスを設定していて、ストップロスに達した時点でポジションの半分を決済し、新たにストップロスが設定されます。
+        
+        時間軸は３０分足をおすすめしております。
+        
+        大きく勝って小さく負けるアルゴリズムですので、短期間ではなく長期で運用していただいた方が結果につながりやすいです。
+        </p>
+    </div>
+  </div>
+  <!-- container -->
+
+
+
+  <div class="container" id='backtest'>
+    <table>
+      <tr>
+        <th>純利益</th>
+        <th>379,688.45</th>
+      </tr>
+      <tr>
+        <th>総利益</th>
+        <th>2294502.77</th>
+      </tr>
+      <tr>
+        <th>総損失</th>
+        <th>-1914814.33</th>
+      </tr>
+      <tr>
+        <th>初期証拠金</th>
+        <th>10,000</th>
+      </tr>
+      <tr>
+        <th>スプレッド</th>
+        <th>16(XMを想定)</th>
+      </tr>
+      <tr>
+        <th>通貨ペア</th>
+        <th>USDJPY</th>
+      </tr>
+      <tr>
+        <th>時間軸</th>
+        <th>M15</th>
+      </tr>
+      <tr>
+        <th>バックテスト期間</th>
+        <th>2012/1 ~ 2018/1(6年)</th>
+      </tr>
+
+      <tr>
+        <th>テストバー数</th>
+        <th>75291</th>
+      </tr>
+      <tr>
+        <th>モデルティック数</th>
+        <th>109563441</th>
+      </tr>
+      <tr>
+        <th> 	モデリング品質</th>
+        <th>90.00%   </th>                                                                                                                                                                                                                                 </th>
+      </tr>
+
+      <tr>
+        <th>プロフィットファクタ</th>
+        <th>1.20</th>
+      </tr>
+
+      <tr>
+        <th>期待利得</th>
+        <th>321.77</th>
+      </tr>
+
+      <tr>
+        <th>絶対ドローダウン</th>
+        <th>4134.46</th>
+      </tr>
+
+      <tr>
+        <th>最大ドローダウン</th>
+        <th>87654.80(19.4%)</th>
+      </tr>
+
+      <tr>
+        <th>相対ドローダウン</th>
+        <th>56.32%</th>
+      </tr>
+      <tr>
+        <th>取引総数</th>
+        <th>1180</th>
+      </tr>
+      <tr>
+        <th>売りポジション(勝率%）</th>
+        <th>548(48.54%)</th>
+      </tr>
+      <tr>
+        <th>買いポジション(勝率%）</th>
+        <th>632(51.42%)</th>
+      </tr>
+
+      <tr>
+        <th> 	勝率(%)</th>
+        <th>591(50.08%)</th>
+      </tr>
+
+      <tr>
+        <th>最大 	勝トレード</th>
+        <th>25569.61</th>
+      </tr>
+      <tr>
+        <th>最大 敗トレード</th>
+        <th>-42084.80</th>
+      </tr>
+      <tr>
+        <th>平均 	勝トレード</th>
+        <th>3882.41</th>
+      </tr>
+      <tr>
+        <th>平均 敗トレード	</th>
+        <th>-3250.96</th>
+      </tr>
+
+      <tr>
+        <th>最大 	連勝(金額)</th>
+        <th>8(58789.12)</th>
+      </tr>
+      <tr>
+        <th>最大 	連敗(金額)</th>
+        <th>13(-48548.00)</th>
+      </tr>
+      <tr>
+        <th>最大 	連勝(トレード数)</th>
+        <th>58789.12(8)</th>
+      </tr>
+      <tr>
+        <th>最大 	連敗(トレード数)</th>
+          <th>-71868.16(10)</th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>平均 	連勝</th>
+        <th>2</th>
+      </tr>
+      <tr>
+        <th>平均 	連敗</th>
+        <th>2</th>
+      </tr>
+
+    </table>
+    <div class="image">
+      <img src="{% static 'image/vision_system.png' %}" alt="vision_system">
+    </div>
+  </div>
+  <!-- container-->
+
+
+  <div class="container" id='fowardtest'>
+    .
+    <p>現在テスト中</p> <br>
+    <!-- <p><span>しばらくお待ちください</span></p> -->
+  </div>
+  <!-- container-->
+
+</div>
+<!-- ea -->
+
+{% endblock content %}
+
+{% block javascript %}
+<script src="{% static 'ea/scripts/change_page.js' %}" ></script>
+
+{% endblock javascript %}

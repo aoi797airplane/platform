@@ -1,0 +1,76 @@
+@import './_600up';
+
+#top{
+    height: 300px;
+    .top-content{
+        width: 50%;
+        top: 45%;
+        & h1{
+            font-size: 50px;
+        }
+        & p{
+            font-size: 38px;
+            margin: 0;   
+        }
+    }
+}
+
+.main-page{
+
+    
+    & .left-column{
+  
+        & #ea-list{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: left;
+
+            & .ea{
+                height: 250px;
+                width: 180px;
+                margin: 8px 13px;
+                & .ea-content1{
+                    margin-bottom: 2%;
+                    & p{
+                        font-size: 16px;
+                        border-bottom: 2px solid black;
+                        width: 70%;
+                    }
+                }
+            }
+        }
+        & #how-to-use{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            
+            & .description{
+
+                & .step{
+                    top: 43%;
+                    left: 3%;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                & .step_content{
+         
+                    & p{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    
+    }
+    
+
+    // & .right-column {
+    //     width: 23%;
+    // }
+
+        
+}

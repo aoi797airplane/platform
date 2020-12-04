@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block  css %}
+<link rel="stylesheet" href="{% static 'user/styles/style.css' %}" >
+
+{% endblock %}
+
+{% block title %}
+EA libraries ログイン 
+{% endblock title %}
+
+{% block content %}
+<div class="login">
+  <h2 class="active"> ログイン </h2>
+    <form action="" method="POST" >
+
+        {% csrf_token %}
+        {% if error %}
+        <div class="error">
+        <strong>{{error}}</strong>
+      </div>
+        {% endif %}
+ 
+            <input class = "text" type="email" name="email" id="id_email" required maxlength="30">
+            <span>メールアドレス</span>
+            <br>
+            <br>
+            <input  class = "text" type="password" name="password" id="id_password" required maxlength="50">
+            <span>パスワード</span>
+            <input  class = 'check' type="checkbox" id="password-check" />
+            <label for="password-check">パスワードを表示する</label>
+            <br>
+            <br>
+            <br>
+            <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" />
+            <label for="checkbox-1-1">ログイン情報を保存</label>
+      <input type="submit" class="signin" value="Sign in">
+      <hr>
+      <a class = 'forgot' href="#">パスワードを忘れた場合</a>
+    </form>
+</div>
+
+
+{% endblock content %}
+
+{% block javascript %}
+<script src="{% static 'user/scripts/password.js' %}" ></script>
+
+{% endblock javascript %}

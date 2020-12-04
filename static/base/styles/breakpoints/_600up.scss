@@ -1,0 +1,30 @@
+@import './_480up';
+
+.header{
+  // height: 160px;
+  &_nav{
+    display: flex; 
+    // @extend .font-md;
+    font-size: 3vh;
+    font-weight: bold;
+    
+  }
+  &-button{
+    display: inline;
+  }
+  &_ul{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &_li{
+    margin-left: 20px;
+  }
+}
+
+
+.mobile-menu{
+  display: none;
+}

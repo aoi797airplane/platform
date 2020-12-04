@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+
+{% block  css %}
+<link rel="stylesheet" href="{% static 'request/styles/style.css' %}" >
+
+{% endblock %}
+
+{% block title %}
+EA libraries EA申請
+{% endblock title %}
+
+{% block content %}
+<div class="request">
+  <h2 class="active"> EA申請 </h2>
+  <div class="error">
+    <strong>{{error}}</strong>
+  </div>
+  <div class="userinfo">
+    <p>EAをメールにてお送りいたしますので、</p>
+    <p>メールアドレスと口座番号が正しいことをご確認ください</p>
+    <br>
+    <table>
+      <tr>
+        <th>口座番号:</th>
+        <td>{{account}}</td>
+      </tr>
+      <tr>
+        <th>メールアドレス: </th>
+        <td>{{email}}</td>
+      </tr>
+    </table>
+    <!-- <br>
+    <br> -->
+
+    <a href="{% url 'user_info' %}">訂正する </a>
+  
+  </div>
+  <form action="" method="POST" >
+
+    {% csrf_token %}
+    <span>申請したいEA</span>
+
+    <div class="order_ea">
+      <ul>
+        {% for ea in ea %}
+        <li>
+        <input type="radio" class="custom-checkbox" name="ea"  id="ea" required maxlength="40", value="{{ea.id}}">
+        <label for="ea">{{ea}}</label>
+      </li>
+        {% endfor %}
+
+      </ul>
+
+  </div>
+  
+    <input type="submit" class="signin" value="送信">
+
+  </form>
+  <br>
+  <br>
+  <br>
+  <hr>
+
+</div>
+
+
+{% endblock content %}
+
+{% block javascript %}
+<!-- <script src="{% static 'user/scripts/password.js' %}" ></script> -->
+
+{% endblock javascript %}

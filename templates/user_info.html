@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block  css %}
+<link rel="stylesheet" href="{% static 'user/styles/account_info.css' %}" >
+
+{% endblock %}
+
+{% block title %}
+EA libraries 会員情報
+{% endblock title %}
+
+{% block content %}
+<div class="login">
+  <h2 class="active"> 会員情報 </h2>
+  <h3> {{request.user}}</h3>
+
+
+  {% if ea %}
+  <div class="available">
+    <div class="show_ea">
+      <p>利用可能なEA</p>
+    
+      {% for ea in ea %}
+      <p>{{ea}}</p>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% endif %}
+
+
+
+    <form action="" method="POST" >
+
+        {% csrf_token %}
+
+            {{form.account|add_class:'text'}}
+
+            <span>口座番号</span>
+            <br>
+            {{user.email|add_class:'text'}}
+            <span>Email</span>
+            <br>
+    
+            {{form.username|add_class:'text'}}
+            <span>名前（漢字）</span>
+            <br>
+            
+            {{form.kana_username|add_class:'text'}}
+            <span>名前（カタカナ）</span>
+            <br>
+                    
+            {{form.age|add_class:'text'}}
+            <span>年齢</span>
+            <br>
+            <div class="gender_form">{{form.gender|add_class:'custom-checkbox'}}</div>
+
+            <input type="submit" class="signin" value="登録">
+
+      <hr>
+
+    </form>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
+
+
+{% block javascript %}
+
+
+{% endblock javascript %}

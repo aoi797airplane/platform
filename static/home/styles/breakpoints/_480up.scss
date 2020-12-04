@@ -1,0 +1,59 @@
+
+@import './base';
+
+
+
+
+.main-page{
+
+    
+    & .left-column{
+        // width: 70%;
+        // height: 100%;
+        // background-color: yellow;
+
+        & #ea-list{
+            // flex-direction: row;
+            // flex-wrap: wrap;
+            // justify-content: left;
+
+            & .ea{
+                // height: 250px;
+                // width: 180px;
+                // margin: 8px 13px;
+                & .ea-content1{
+                    margin-bottom: 2%;
+                    & p{
+                        font-size: 22px;
+                        // border-bottom: 2px solid black;
+                        // width: 70%;
+                    }
+                }
+            }
+        }
+        & #how-to-use{            
+            & .description{
+                & .step{
+                    top: 45%;
+                    left: 4%;
+                    width: 30px;
+                    height: 30px;
+                }
+                & .step_content{
+      
+                    & p{
+                        font-size: 17px;
+                    }
+                }
+            }
+
+        }
+    
+    }
+    
+    // & .right-column {
+      
+    // }
+
+        
+}

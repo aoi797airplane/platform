@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block  css %}
+<link rel="stylesheet" href="{% static 'home/styles/style.css' %}" >
+
+{% endblock %}
+
+{% block title %}
+EA libraries 
+{% endblock title %}
+
+{% block content %}
+
+<a href="{% url 'signup' %}" >
+
+    <div class  = 'top' id="top">
+        <div class="img"><img src="{% static 'image/top3.webp'%}" alt="top image"></div>
+        <div class="top-content">
+            <h1 > <span>EA</span>-Libraries</h1>
+            <p>自動売買システムを</p>
+            <p> <span>無料で</span> </p>
+            <p>ダウンロード</p>
+
+        </div>
+    </div>
+</a>
+<!-- top -->
+
+
+
+<div class  = 'top'  id="top_info">
+
+
+    {% if user.is_authenticated %}
+    <div class="top_signin">
+        <a href="https://clicks.pipaffiliates.com/c?c=544837&l=ja&p=1" rel="nooperner noreferrer nofollow"  class="btn btn--circle"><i class="far fa-envelope"></i><br>今なら3000円ボーナス！<br><br>XM無料口座開設<i class="fas fa-angle-down fa-position-bottom"></i></a>
+    </div>
+    {% else %}
+        <div class="top_signin">
+            <a href="{% url 'signup' %}" class="btn btn--circle"><i class="far fa-envelope"></i><br>最短1分!!<br><br>無料会員登録<i class="fas fa-angle-down fa-position-bottom"></i></a>
+        </div>
+        {% endif %}
+        <!-- <div class="test">
+
+        </div> -->
+</div>
+<!-- top -->
+
+<div class="main-page">
+    <div class="left-column">
+        <h2 class="ea-title">EA一覧</h2>    
+        <div class  = 'formations' id="ea-list">
+            
+            <a href="{% url 'ea' %}">
+                <div class="ea">
+                    <div class="ea-content1"><p>Vision System</p></div>
+                    <div class="ea-content2"><img src="{% static 'image/vision_system.png'%}" alt="EA picture"></div>
+                    <div class="ea-content3"><p>プロフィットファクター: 1.20 </p></div>
+                    <div class="ea-content3"><p>純利益率: 37.96 倍</p></div>
+                    <div class="ea-content3"><p>運用期間： 2012/1 ~ 2018/1</p></div>
+
+                </div>
+            </a>    
+            
+            <div class="ea" id="yet"> <div>upcoming soon</div> </div>
+            <div class="ea" id="yet"> <div>upcoming soon</div> </div>
+            <div class="ea" id="yet"> <div>upcoming soon</div> </div>
+            <!-- <div class="ea" id="yet"> <div>upcoming soon</div> </div> -->
+            <!-- <div class="ea"></div> -->
+            <!-- <div class="ea"></div> -->
+            <!-- <div class="ea"></div> -->
+            <!-- <div class="ea"></div> -->
+        </div>
+        <!-- ea-list -->
+        <h2 class="howto-title">無料で自動売買ソフトを使うまでのステップ</h2>
+        <div class  = 'formations' id="how-to-use">
+            <div class="description">
+        
+
+                    <!-- <div class="step">
+                        <img src="{% static 'image/1.png' %}" alt="step 1">
+                    </div> -->
+                    <div class="how-to-use_img">
+                        <a href="{% url 'signup' %}" > <img src="{% static 'image/step1.webp'%}" alt="step1"> </a>     
+                    </div>
+                    <div class="step_content"> <p> <span>①</span>  無料会員登録</p> </div>
+                
+            </div>
+
+            <div class="description">
+           
+                    <!-- <div class="step">
+                        <img src="{% static 'image/2.png'%}" alt="step 2">
+                    </div> -->
+                    <div class="how-to-use_img">
+                        <a href="https://clicks.pipaffiliates.com/c?c=544837&l=ja&p=1" rel="nooperner noreferrer nofollow"  > <img src="{% static 'image/XM.png' %}" alt="step2">
+                    </div>
+                    <div class="step_content"><p> <span>②</span> XMの口座開設&10万円入金</p></div>
+                
+            </div>
+            
+            <div class="description">
+                    <!-- <div class="step">
+                        <img src="{% static 'image/3.png'%}" alt="step 3">
+                    </div> -->
+                    <div class="how-to-use_img">
+                        <a href="{% url 'user_info' %}" ><img src="{% static 'image/step3_new.jpg'%}" alt="step3"> </a>
+                    </div>
+                    <div class="step_content"><p> <span>③</span> 口座番号を会員情報ページに入力</p></div>
+
+            </div>
+
+        </div>
+        <!-- how-to-use -->
+    </div>
+    <!-- left-column -->
+
+
+<div class="right-column">  
+    <div class ="formations">
+
+        <div class="bottom_ad">
+            <a href="https://clicks.pipaffiliates.com/c?m=9249&c=544837"><img src="https://ads.pipaffiliates.com/i/9249?c=544837" width="100%" height="425" /></a>
+        </div>
+
+       <div class="side_ad">
+           <a href="https://clicks.pipaffiliates.com/c?m=7722&c=544837"><img src="https://ads.pipaffiliates.com/i/7722?c=544837" width="100%" height="600" /></a>
+
+       </div>
+    </div>
+</div>
+     <!-- right-column -->
+
+</div>
+<!-- main-page -->
+
+
+
+
+{% endblock content %}
+
+
+{% block javascript %}
+
+
+{% endblock javascript %}

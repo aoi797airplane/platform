@@ -1,0 +1,119 @@
+@import './_480up';
+
+$topheight: 60px;
+#top{
+    height: 260px;
+    .top-content{
+        width: 50%;
+        top: 50%;
+        & h1{
+            font-size: 40px;
+        }
+        & p{
+            font-size: 25px;
+            margin: 0;   
+        }
+    }
+
+}
+
+.main-page{
+    flex-direction: row;
+    justify-content: center;    
+    & .left-column{
+        width: 75%;
+        height: 100%;
+
+        & #ea-list{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: left;
+
+            & .ea{
+                height: 250px;
+                width: 180px;
+                margin: 8px 13px;
+                & .ea-content1{
+                    margin-bottom: 2%;
+                    & p{
+                        font-size: 16px;
+                        border-bottom: 2px solid black;
+                        width: 70%;
+                    }
+                }
+                & .ea-content3{
+                    & p{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        & #how-to-use{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            
+            & .description{
+                height: calc(50vw * 0.75);
+                width: 32%;
+                max-height: 300px;
+                margin: 2%;
+            
+
+                & .step{
+                    top: 45%;
+                    left: 3%;
+                    width: 30px;
+                    height: 30px;
+                }
+                & .how-to-use_img{
+                    width: 100%;
+                    height: 100%;
+
+                    
+                    & img{
+                        width: 100%;
+                        height: 90%; 
+                    }
+                }
+                & .step_content{
+                    bottom: 18%;
+                    left: 0;
+                    height: 40%;
+                    width: 90%;
+                    & p{
+                        font-size: 14px;
+                        // margin-bottom: 10%;
+                        bottom: 15%;
+                        left: 0%;
+                        
+                    }
+                }
+            }
+        }
+    
+    }
+    
+
+    & .right-column {
+        width: 20%;
+        & .side_ad{
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+        }
+        & .bottom_ad{
+            display: none;
+ 
+        }
+        
+    }
+
+        
+}
+
+
+

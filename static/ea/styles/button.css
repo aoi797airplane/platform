@@ -1,0 +1,62 @@
+.button_content {
+  position: relative;
+  height: 40px;
+  width: 50%;
+  text-align: center;
+  margin: 50px auto;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+
+.button_content .btn {
+  font-size: 1.6vmin;
+  font-weight: 700;
+  line-height: 1.4;
+  display: inline-block;
+  padding: 1rem 4rem;
+  margin: 0px 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  outline: none;
+}
+
+.button_content .btn--circle {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  border-radius: 10px;
+  padding: 0px 0 0;
+  color: #fff;
+  background-color: orange;
+  -webkit-box-shadow: 0 7px 0  #b46f08;
+          box-shadow: 0 7px 0  #b46f08;
+}
+
+.button_content .btn--circle i:before {
+  content: '';
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+
+.button_content .btn--circle:hover {
+  -webkit-transform: translate(0, 4px);
+          transform: translate(0, 4px);
+  color: #fff;
+  -webkit-box-shadow: 0 3px 0 #020e16;
+          box-shadow: 0 3px 0 #020e16;
+  background-color: #9e4512;
+}
+
+@media (min-width: 600px) {
+  .button_content .btn {
+    font-weight: 700;
+    line-height: 1;
+  }
+}
+/*# sourceMappingURL=button.css.map */
